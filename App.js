@@ -89,6 +89,7 @@ TaskManager.defineTask(LOCATION_TASK_NAME, ({ data, error }) => {
     // Error occurred - check `error.message` for more details.
     return;
   }
+
   if (data) {
     const { locations } = data;
     db.collection("locations").doc("location").set({
